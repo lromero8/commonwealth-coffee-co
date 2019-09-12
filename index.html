@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Common Wealth Coffee Co</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display|Montserrat|Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+    <header class="topHeader">
+       <p>Call us 519 423 1113 &nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;info@cwcc.ca</p>
+    </header>
+
+    <br><br>
+    
+    
+    <nav>
+            <img src="imgs/logo.webp" alt="logo" />
+        <ul>
+            <li class="home"><a href="index.html">HOME</a></li>
+            <li class="mens"><a href="menu.html">MENU</a></li>
+            <li class="womens"><a href="mot.html">MEET OUR TEAM</a></li>
+            <li class="gear"><a href="contact.html">CONTACT US</a></li>
+            <li class="gear"><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+
+    
+    <!-- SLIDER -->
+    <section>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="imgs/home-1-slider.jpg" style="width:100%">
+                <!-- <div class="text">Caption Text</div> -->
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="imgs/home-2-slider.jpg" style="width:100%">
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="imgs/home-3-slider.jpg" style="width:100%">
+                <!-- <div class="text">Caption Three</div> -->
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+            
+
+    </section>
+
+    <script>
+        var slideIndex = 1;
+        var timer = null;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            clearTimeout(timer);
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            clearTimeout(timer);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n==undefined){n = ++slideIndex}
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            timer = setTimeout(showSlides, 5000);
+        }
+
+    </script>    
+
+    <br><br><br><br><br>
+
+    <div id="wrap">
+
+        <section>
+            <img src="imgs/section1.jpg" alt="bread at the window">
+            <h1>01 <span>BEAUTIFUL PLACE</span></h1>
+            <p>Welcome to the home of handcrafted artisan coffee. We have one of Canada's largest selections of Fairtrade whole bean coffee from all around the world, roasting over 35 types of coffee, including 20 single origins, as well as several decaf and specialty blends. Let us help you discover your perfect cup of coffee</p>
+        </section>
+        <section>
+            <img src="imgs/section2.jpg" alt="grain scoop">
+            <h1>02 <span>FEEL THE COFFEE</span></h1>
+            <p>Welcome to the home of handcrafted artisan coffee. We have one of Canada's largest selections of Fairtrade whole bean coffee from all around the world, roasting over 35 types of coffee, including 20 single origins, as well as several decaf and specialty blends. Let us help you discover your perfect cup of coffee</p>
+        </section>
+        <section>
+            <img src="imgs/section3.jpg" alt="cake and coffee">
+            <h1>03 <span>FULL TASTE</span></h1>
+            <p>Welcome to the home of handcrafted artisan coffee. We have one of Canada's largest selections of Fairtrade whole bean coffee from all around the world, roasting over 35 types of coffee, including 20 single origins, as well as several decaf and specialty blends. Let us help you discover your perfect cup of coffee</p>
+        </section>
+
+    </div>
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+        
+    <div id="wrap2">
+
+        <div class="wrap2-titles">
+            <h2>What Happens Here</h2>
+            <h1>READ OUR LATEST NEWS</h1>
+        </div>
+
+
+        <section>
+            <img src="imgs/section4.jpg" alt="girl eating bread and coffee">
+            <h1><span>COFFEE & CROISSANT</span></h1>
+            <span class="author">by Luis Romero | Life | 8.14.2019</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat dictum lacus, ut hendrerit mi pulvinar vel. Fusce id nibh at neque eleifend tristique at sit amet libero. In aliquam in nis...</p>
+            <a href="#" class="author">Read More -></a>
+        </section>
+        <section>
+            <img src="imgs/section5.jpg" alt="man pouring milk">
+            <h1><span>COFFEE SHOP</span></h1>
+            <span class="author">by Luis Romero | Life | 8.14.2019</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat dictum lacus, ut hendrerit mi pulvinar vel. Fusce id nibh at neque eleifend tristique at sit amet libero. In aliquam in nis...</p>
+            <a href="#" class="author">Read More -></a>
+        </section>
+        <section>
+            <img src="imgs/section6.jpg" alt="coffee tables">
+            <h1><span>COFFEE BAR</span></h1>
+            <span class="author">by Luis Romero | Life | 8.14.2019</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat dictum lacus, ut hendrerit mi pulvinar vel. Fusce id nibh at neque eleifend tristique at sit amet libero. In aliquam in nis...</p>
+            <a href="#" class="author">Read More -></a>
+        </section>
+    </div>
+
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    
+    
+    <footer>
+        <section>
+            <div>
+                Opening Hours
+                <br><br><br>
+
+
+                <table>
+                    <tr><th>Monday</th><th>--------</th><th id="closed">Closed</th></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th>Tuesday</th><th>--------</th><td>9:00 - 22:00</td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th>Wednesday</th><th>--------</th><td>9:00 - 22:00</td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th>Thursday</th><th>--------</th><td>9:00 - 22:00</td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th>Friday*</th><th>--------</th><td>9:00 - 13:00</td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th>Saturday*</th><th>-------</th><td>9:00 - 13:00</td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th></th><th></th><td></td></tr>
+                    <tr><th>Sunday</th><th>-------</th><td>9:00 - 22:00</td></tr>
+                </table>
+
+
+
+                
+            </div>
+            <div>
+                Latest Posts
+                <br><br><br>
+
+                <a href="#">Expand your mind, change everything</a>                
+                <p class="blog-views">14.02.2017</p>
+                <p class="post-line">&nbsp;</p>
+
+                <a href="#">Places to get lost</a>
+                <p class="blog-views">14.02.2017</p>
+                <p class="post-line">&nbsp;</p>
+                
+                <a href="#">Lewis Howes</a>
+                <p class="blog-views">14.02.2017</p>
+
+                                
+            </div>
+            <div>
+                Contact Us
+                <br><br><br>
+
+                <a href="mailto:l_romero@fanshawe.ca">l_romero@fanshawe.ca</a>
+                <p class="address">
+                    478 Richmond St, London N6A 3E6,
+                </p>
+                <p class="address">
+                    Ontario
+                </p>
+            </div>
+            <div>
+                Other Locations
+                <br><br><br>
+
+                <a href="https://www.cwcoffeeco.com/" target="_blank">Common Wealth Coffee Co Toronto</a>
+                <p class="address">
+                    140 Yonge St, Toronto M5C 1X6
+                </p>
+                <p class="address">
+                    Ontario
+                </p>               
+                <p class="post-line"></p>
+
+                <a href="https://www.cwcoffeeco.com/" target="_blank">Common Wealth Coffee Co Calgary</a>
+                <p class="address">
+                    102-1019 17 Ave SW, Calgary, AB T2T 0A7
+                </p>
+                <p class="address">
+                    Alberta
+                </p>               
+            </div>
+
+            <!-- <br><br><br><br><br> -->
+        </section>
+    </footer>
+
+
+    <ul class="bottom-footer space-between">
+        <li class="flex-item">London, Ontario</li>
+        <li class="flex-item">Common Wealth Coffee Co</li>
+        <li class="flex-item">&#0169; 2019 All rights reserved</li>
+    </ul>
+</body>
+
+</html>
